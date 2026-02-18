@@ -19,38 +19,16 @@ concurrent algorithms.
 
   | Date         | Description |
   | ----------   |------------ |
-  | 04 feb. 2025 | Introduction to the module and its logistics ([slides](intro.pdf)) |
-  | 06 feb. 2025 | NA |
-  | 11 feb. 2025 | Introduction to CCS ([slides](./CCS/CCS.pdf)) |
-  | 13 feb. 2025 | NA |
-  | 18 feb. 2025 | Jornadas da Física |
-  | 20 feb. 2025 | Semantics of CCS ([slides](./CCS/CCS.pdf)) | 
-  | 25 feb. 2025 | Introduction to timed automata ([slides](./introtimedAutomata/timed-automata.pdf)) |
-  | 04 mar. 2025 | Carnival |
-  | 06 mar. 2025 | UPPAAL (the semaphore, the philosophers, the lamp, and [the adventurers](https://www.youtube.com/watch?v=7yDmGnA8Hw0&t)) |
-  | 11 mar. 2025 | Continuation of the previous lecture |
-  | 13 mar. 2025 | Verification of timed automata ([slides](./verificationTimedAutomata/uppaal.pdf)) | 
-  | 18 mar. 2025 | Operational semantics of simple languages ([slides](./hybridProgramming/hybridProgramming.pdf)) | 
-  | 20 mar. 2025 | Recalling Haskell ([code](./hybridProgramming/lectureCPC.hs)) | 
-  | 25 mar. 2025 | Implementation of an operational semantics ([code](./hybridProgramming/MyLang.hs)) | 
-  | 01 apr. 2025 | Hands-on approach to Lince ([code](./hybridProgramming/MyLang.hs)) | 
-  | 03 apr. 2025 | Revisions | 
-  | 08 apr. 2025 | Introduction to the simply-typed lambda-calculus ([slides](./lambda_calc/lambdaCalc.pdf))| 
-  | 10 apr. 2025 | Continuation of the previous lecture ([slides](./lambda_calc/lambdaCalc.pdf))| 
-  | 22 apr. 2025 | Lambda-calculus with effects ([slides](./lambda_calc/stlcE.pdf))| 
-  | 06 may 2025 | Monads in practice ([code](./code.zip))| 
-
+  | 16 feb. 2025 | Introduction to the module and its logistics ([slides](./introSlides/intro.pdf)) |
+  | 18 feb. 2025 | Introduction to CCS ([slides](./ccs/CCS.pdf)) |
 
 # Assessment
 
-Two individual assignments:
-+ [first assignment](tp_uppaal/tp.pdf)
-+ [second assignment](tp_haskell/tp2.pdf) and [respective code](tp_haskell/code_tp2.zip)
-
+Two individual assignments
  
 # Contacts
 
-The day and time for appointments is Wednesday afternoon. Please email me the
+The day and time for appointments is tuesday afternoon. Please email me the
 day before if you wish to meet. If you prefer you can also send an email with
 your questions to [me](mailto:nevrenato@di.uminho.pt) or we can have
 an online meeting.
