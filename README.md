@@ -21,6 +21,8 @@ concurrent algorithms.
   | ----------   |------------ |
   | 16 feb. 2025 | Introduction to the module and its logistics ([slides](./introSlides/intro.pdf)) |
   | 18 feb. 2025 | Introduction to CCS ([slides](./ccs/CCS.pdf)) |
+  | 23 feb. 2025 | Continuation of the previous lecture  |
+  | 24 feb. 2025 | Introduction to timed automata ([slides](./introtimedAutomata/timed-automata.pdf)) |
 
 # Assessment
 
