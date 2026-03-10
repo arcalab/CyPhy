@@ -19,10 +19,12 @@ concurrent algorithms.
 
   | Date         | Description |
   | ----------   |------------ |
-  | 16 feb. 2025 | Introduction to the module and its logistics ([slides](./introSlides/intro.pdf)) |
-  | 18 feb. 2025 | Introduction to CCS ([slides](./ccs/CCS.pdf)) |
-  | 23 feb. 2025 | Continuation of the previous lecture  |
-  | 24 feb. 2025 | Introduction to timed automata ([slides](./introtimedAutomata/timed-automata.pdf)) |
+  | 16 feb. 2026 | Introduction to the module and its logistics ([slides](./introSlides/intro.pdf)) |
+  | 18 feb. 2026 | Introduction to CCS ([slides](./ccs/CCS.pdf)) |
+  | 23 feb. 2026 | Continuation of the previous lecture  |
+  | 24 feb. 2026 | Introduction to timed automata ([slides](./introtimedAutomata/timed-automata.pdf)) |
+  | 09 mar. 2026 | Introduction to UPPAAL |
+  | 10 mar. 2026 | The adventurers problem |
 
 # Assessment
 
