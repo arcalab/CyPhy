@@ -64,14 +64,29 @@ ecode = undefined
 dcode :: String -> String
 dcode = undefined
 
--- Implement the QuickSort algorithm
-qSort :: [Int] -> [Int]
-qSort = undefined
+-- Implement the insertionSort algorithm
+iSort :: [Int] -> [Int]
+iSort = undefined
 
+-- Provide "the" list of factorial numbers
+lfact :: [Int]
+lfact = undefined
 
 -- Implement the solution to the Hanoi problem
 hanoi :: Int -> a -> a -> a -> [(a,a)]
 hanoi = undefined
+
+
+-- Wait, what ?
+find :: ([Bool] -> Bool) -> [Bool]
+
+find p = if forsome(\a -> p(False : a))
+        then False : find (\a -> p(False:a))
+        else True :  find (\a -> p(True:a))
+
+forsome  :: ([Bool] -> Bool) -> Bool
+forsome p = p (find p)
+
 -----------------------------------------
 
 -- Datatypes ----------------------------

@@ -32,6 +32,7 @@ concurrent algorithms.
 
 Two individual assignments
 + [First assignment](./tp_uppaal/tp.pdf)
+
 # Contacts
 
 The day and time for appointments is tuesday afternoon. Please email me the
