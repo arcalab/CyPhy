@@ -55,23 +55,22 @@
 %                         Start here
 % --------------------------------------------------------------
  
-\title{Cyber-Physical Computation
-\\ {\small First Assignment -- the case of an airfield}}
+\title{The curious case of an airport}
 \author{Renato Neves}
  
 \maketitle
 
-Consider a private airfield used by two planes, which can be either flying,
-parked, landing, or taking off. The airfield is a \emph{resource} shared by the
+Consider a private airport used by two planes, which can be either flying,
+parked, landing, or taking off. The airport is a \emph{resource} shared by the
 two planes, and the following requirements must be met:
 \begin{enumerate}
-  \item only 1 plane can use the runway at a time;
-  \item a Controller component receives requests to \emph{land} or to \emph{take off}, and replies with a \emph{wait} signal when the field is unavailable;
-  \item each plane sends requests to the Controller to \emph{land} or to \emph{take off}, and sends notifications when the field becomes \emph{free};
-  \item the Controller has 5 time units to notify a plane to wait;
+  \item only one plane can use the runway at a time;
+  \item a controller component receives requests to \emph{land} or to \emph{take off}, and replies with a \emph{wait} signal when the field is unavailable;
+  \item each plane sends requests to the controller to \emph{land} or to \emph{take off}, and sends notifications when the field becomes \emph{free};
+  \item the controller has 5 time units to notify a plane to wait;
   \item after 5 time units from requesting access to the field and with no wait signal, the planes take another 5 time units to reach the field;
   \item each plane takes non-deterministically between 1-3 time units to take off, and between 4-6 time units to land and park;
-  \item after taking off and after parking the planes notify the Controller with a \emph{gone} signal;
+  \item after taking off and after parking the planes notify the controller with a \emph{gone} signal;
   \item if a plane is told to wait, we assume it will take between 5-7 time units to request again.
 \end{enumerate}
 
@@ -81,9 +80,9 @@ desired properties that the model should satisfy. Verify the properties via
 \textsc{Uppaal}.
 
 \smallskip
-\noindent {\underline{Extra points}:} Extend your model to handle $n$ planes at
-once and $n$ fields at once. Can you think of other useful features that the
-airfield should have? If so please discuss them and present the respective
+\noindent {\underline{The second, more exploratory stage}:} Extend your model to handle $n$ planes at
+once and $n$ runways at once. Can you think of other useful features that the
+airport should have? If so please discuss them and present the respective
 models/properties.
 
 \bigskip
@@ -99,5 +98,10 @@ models/properties.
 
 \myparagraph{Deadline:} 16th April 2026 @ 23h59
 \end{mdframed}
+
+\bigskip
+\begin{center}
+        \href{https://docs.uppaal.org/}{\textsc{UPPAAL}'s reference manual} 
+\end{center}
 
 \end{document}
