@@ -25,6 +25,8 @@ concurrent algorithms.
   | 24 feb. 2026 | Introduction to timed automata ([slides](./introtimedAutomata/timed-automata.pdf)) |
   | 09 mar. 2026 | Introduction to UPPAAL |
   | 10 mar. 2026 | The adventurers problem |
+  | 16 mar. 2026 | Verification of timed automata ([slides](./verificationTimedAutomata/uppaal.pdf)) |
+  | 17 mar. 2026 | Recalling Haskell ([code](./lectureCPC.hs)) |
 
 # Assessment
 
