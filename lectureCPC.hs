@@ -1,4 +1,4 @@
-{- Cyber-Physical Computation 2023/2024 - Recalling Haskell.
+{- Cyber-Physical Computation 2025/2026 - Recalling Haskell.
  - Why Haskell? We will use Haskell in this course to implement 
  - programming languages and respective semantics.
  - Goal: Solve the exercises listed below.
@@ -6,7 +6,7 @@
 
 module LectureCPC where
 
--- Basic functions and conditionals -- 
+-- Programming 101 ---------------------------------------------------------
 
 -- Implement the function that returns 
 -- the maximum of two integers.
@@ -28,16 +28,6 @@ scaleV = undefined
 -- two 2-dimensional real vectors
 addV :: ((Double,Double),(Double,Double)) -> (Double, Double)
 addV = undefined
-
--- Type Synonims
-type TMatrix = ((Double,Double),(Double,Double))
-type TVector = (Double,Double)
-
-multM :: (TMatrix,TVector) -> TVector
-multM = undefined
---------------------------------------
-
--- Recursion ------------------------- 
 
 -- Implement the function that calculates
 -- the factorial of an integer
@@ -68,28 +58,18 @@ dcode = undefined
 iSort :: [Int] -> [Int]
 iSort = undefined
 
--- Provide "the" list of factorial numbers
-lfact :: [Int]
-lfact = undefined
+-- Implement the quickSort algorithm (invented by T. Hoare 1934-2026)
+qSort :: [Int] -> [Int]
+qSort = undefined
 
 -- Implement the solution to the Hanoi problem
+-- this one is a bit harder, but not really :-)
 hanoi :: Int -> a -> a -> a -> [(a,a)]
 hanoi = undefined
 
+---------------------------------------------------------------------------
 
--- Wait, what ?
-find :: ([Bool] -> Bool) -> [Bool]
-
-find p = if forsome(\a -> p(False : a))
-        then False : find (\a -> p(False:a))
-        else True :  find (\a -> p(True:a))
-
-forsome  :: ([Bool] -> Bool) -> Bool
-forsome p = p (find p)
-
------------------------------------------
-
--- Datatypes ----------------------------
+-- Datatypes --------------------------------------------------------------
 
 -- The datatype of leaf trees
 data LTree a = Leaf a | Fork (LTree a, LTree a) deriving Show
@@ -113,9 +93,14 @@ bincr :: BTree Int -> BTree Int
 bincr = undefined
 
 -- Implement the function that counts the number of leafs
--- in a leaf tree 
-bcount :: BTree Int -> Int
+-- in a binary tree 
+bcount :: BTree a -> Int
 bcount = undefined
+
+-- Implement the function that lists all elements of a binary
+-- tree in a breadth-wise manner
+blist :: BTree a -> [a]
+blist = undefined
 
 -- The datatype of "full" trees
 data FTree a b = Tip a | Join b (FTree a b, FTree a b) deriving Show
@@ -128,12 +113,38 @@ fTree2LTree = undefined
 fTree2BTree :: FTree a b -> BTree b 
 fTree2BTree = undefined
 
--- Implement the semantics of the following very simple programming 
--- language of Arithmetic Expressions
-data Vars = X1 | X2
-data Ops = Sum | Mult
-type AExp = FTree (Either Vars Int) Ops
-type AState = Vars -> Int
+---------------------------------------------------------------------------
 
-semA :: (AExp, AState) -> Int 
-semA = undefined
+-- Higher-order -----------------------------------------------------------
+
+-- Build a function that receives a predicate and a list and returns a filtered
+-- list according to the received predicate
+filter' :: (a -> Bool) -> [a] -> [a] 
+filter' = undefined
+
+---------------------------------------------------------------------------
+
+-- Laziness --------------------------------------------------------------
+
+-- Provide the "infinite" list of factorial numbers, if possible not repeating
+-- computations (cf. memoization)
+lfact :: [Int]
+lfact = undefined
+
+
+-- Wait, wh-what ?
+-- Build a function that given a predicate on **infinite lists** of Bools
+-- return one such list that satisfies this predicate
+-- This one is excitingly hard :-)
+find :: ([Bool] -> Bool) -> [Bool]
+forsome  :: ([Bool] -> Bool) -> Bool
+forall'  :: ([Bool] -> Bool) -> Bool
+
+find = undefined
+
+-- hints ...
+forsome p = p (find p)
+forall' = not . forsome . (\p -> not . p)
+
+---------------------------------------------------------------------------
+
