@@ -29,6 +29,7 @@ concurrent algorithms.
   | 17 mar. 2026 | Recalling Haskell ([code](./lectureCPC.hs)) |
   | 24 mar. 2026 | Continuation of the previous lecture ([code](./lectureCPC.hs)) |
   | 07 apr. 2026 | Introduction to operational semantics ([slides](./hybridProg/hybridProgramming.pdf)) |
+  | 13 apr. 2026 | Introduction to hybrid semantics ([slides](./hybridProg/hybridProgramming.pdf)) |
 
 # Assessment
 
