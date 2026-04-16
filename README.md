@@ -30,6 +30,8 @@ concurrent algorithms.
   | 24 mar. 2026 | Continuation of the previous lecture ([code](./lectureCPC.hs)) |
   | 07 apr. 2026 | Introduction to operational semantics ([slides](./hybridProg/hybridProgramming.pdf)) |
   | 13 apr. 2026 | Introduction to hybrid semantics ([slides](./hybridProg/hybridProgramming.pdf)) |
+  | 14 apr. 2026 | A Zoo of Newtonian hybrid programs ([slides](./hybridProg/hybridProgramming.pdf)) |
+  | 14 apr. 2026 | Autonomous driving ([slides](./hybridProg/hybridProgramming.pdf)) |
 
 # Assessment
 
