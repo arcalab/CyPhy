@@ -1,14 +1,12 @@
+% !TeX program = xelatex
 \documentclass{beamer}
 \usepackage{etex} % fixes new-dimension error
-\usepackage{lmodern}
-\input{macros/preamble}
-\input{macros/macros}
-\input{macros2}
-
 %-------------- template --------------------------------------------------
 \usetheme{metropolis}
 \metroset{block=fill}
 %\usetheme{Boadilla}
+
+% Configuring the foot line
 \setbeamertemplate{footline}
 {
   \leavevmode%
@@ -24,6 +22,7 @@
   \end{beamercolorbox}}%
   \vskip0pt%
 }
+% No configuration symbols
 \makeatother
 \setbeamertemplate{navigation symbols}{}
 
@@ -52,71 +51,11 @@
 \usepackage{pstricks,pst-node,pst-text,pst-3d}
 %------ using color ---------------------------------------------------------
 
-\newrgbcolor{goldenrod}{.80392 .60784 .11373}
-\newrgbcolor{darkgoldenrod}{.5451 .39608 .03137}
-\newrgbcolor{brown}{.15 .15 .15}
-\newrgbcolor{darkolivegreen}{.33333 .41961 .18431}
-%
-%
-\def\gold#1{{\goldenrod #1}}
-% \def\dgold#1{{\darkgoldenrod #1}}
-\def\dgold#1{{\alert{#1}}}
-%\def\brw#1{{\brown #1}}
-\def\dkb#1{{\blue #1}}
-\def\tdkb#1{\textbf{\darkblue #1}}
-%%\def\gre#1{{\green #1}}
-\def\gre#1{{\darkolivegreen #1}}
-\def\gry#1{{\gray #1}}
-\def\rdb#1{{\red #1}}
-\def\st{\mathbf{.}\,}
-\def\laplace#1#2{*\txt{\mbox{ \fcolorbox{black}{myGray}{$\begin{array}{c}\mbox{#1}\\\\#2\\\\\end{array}$} }}}
-%\newcommand{\galois}[2]{#1\; \dashv\; #2}
-
-\def\eqm{\mathbin{\equiv}}                     
-\def\noeqm{\mathbin{\not\!\equiv}}  
-%\newcommand{\flam}[2]{\lambda_{#1}\; .\; #2}
-\def\existential#1#2{\exists_{#1}\;.\; #2}
-\def\existencial#1#2{\exists_{#1}\;.\; #2}
-
-\def\pv#1#2{\langle #1 \rangle #2}
-\def\nc#1#2{[#1]#2}
-\def\pvo#1#2{\langle \! \! \! \langle #1 \rangle \! \! \! \rangle\, #2}
-\def\nco#1#2{\llbracket #1 \rrbracket #2}
-\def\cvg#1{\llbracket \downarrow \rrbracket #1}
-\def\cvgr#1#2{\llbracket #1 \downarrow \rrbracket #2}
-\def\cvgl#1#2{\llbracket \downarrow  #1 \rrbracket #2}
-\def\cvglr#1#2{\llbracket \downarrow  #1 \downarrow \rrbracket #2}
-\def\lfp#1#2{\mu {#1}\, .\, {#2}}
-\def\lpf#1#2{\mu {#1}\, .\, {#2}}
-\def\gfp#1#2{\nu {#1}\, .\, {#2}}
-\def\gpf#1#2{\nu {#1}\, .\, {#2}}
-\def\mset#1{\vvv #1 \vvv}
-\def\vvv{\vert \! \vert}
-\def\mnc#1{\vvv [#1] \vvv}
-\def\mpv#1{\vvv \langle #1 \rangle \vvv}
-\def\bcomp#1{#1^{\text{c}}}
-\def\eqm{\mathbin{\simeq}}
-\def\noeqm{\mathbin{\not\!\simeq}}
-\def\universal#1#2{\forall_{#1}\;.\; #2}
-\def\existential#1#2{\exists_{#1}\;.\; #2}
-\def\oexistential#1#2{\exists^{1}_{#1}\;.\; #2}
-\def\MM{\mathcal{M}}
-\def\uppaal{\textsc{Uppaal}}
-\def\cc#1{\mathcal{C}(#1)}
-\def\R{\mathcal{R}}
-\def\TL#1{\mathcal{T}(#1)}
-\def\HL#1{\mathcal{H}(#1)}
-\def\ET#1{\mathsf{ExecTime(#1)}}
-\newcommand\mdoubleplus{\mathbin{+\mkern-10mu+}}
-
-\AtBeginSection[]
-{
-    \begin{frame}
-        \frametitle{Table of Contents}
-        \tableofcontents[currentsection]
-    \end{frame}
-}
-
+\input{macros2}
+% No configuration symbols
+\makeatother
+\setbeamertemplate{navigation symbols}{}
+%----------------------------------------------------------------------------
 % context
 \AtBeginSection[]
 {
@@ -129,21 +68,20 @@
 
 % logos of institutions
 \titlegraphic{
-  \begin{textblock*}{5cm}(6.7cm,7.57cm)
-     \includegraphics[scale=0.05525]{./images/uminho.png}
+  \begin{textblock*}{5cm}(7.8cm,7.45cm)
+     \includegraphics[scale=0.044]{images/uminho.png}\hspace*{.85cm}~%
   \end{textblock*}
-  \begin{textblock*}{5cm}(9.4cm,7.57cm)
-    \includegraphics[scale=0.50]{./images/haslab.pdf}
+  \begin{textblock*}{5cm}(9.8cm,7.45cm)
+    \includegraphics[scale=0.4]{images/haslab.pdf}
   \end{textblock*}
 }
 
-% No date
+% no date
 \date{}
-
 
 \begin{document}
 
-\title{Simply Typed Lambda-calculus}
+\title{Simply Typed Lambda-Calculus}
 
 \frame[plain]{\titlepage}
 
@@ -152,24 +90,25 @@
 \begin{frame}{Deductive Reasoning}
 
   \begin{block}{The essence}
-          Knowledge obtained via \alert{\underline{assumptions}} and
-          \alert{\underline{logical rules}}
+          Knowledge obtained via \alert{assumptions} and
+          \alert{logical rules}
   \end{block}
 
-  \pause
   \bigskip
   Studied since Aristotle  \dots
 
-  \dots \, long before the age of \alert{\underline{artificial}} computers
+  \dots\ long before the age of \alert{artificial} computers
 
-  What does it have to do with programming ?
+  \pause
+  \bigskip
+  So what does it have to do with programming ?
 \end{frame}
 
-\begin{slide}{A Basic Deductive System}
+\begin{frame}{A Basic Deductive System}
   \begin{minipage}[0.3\textheight]{\textwidth}
   \begin{columns}[c]
   \begin{column}{0.5\textwidth}
-          $\typeA,\typeB \dots$ denote \alert{\underline{propositions}}
+          $\typeA,\typeB \dots$ denote \alert{propositions}
           and $\typeOne$ a proposition that always holds   
   \end{column}
   \begin{column}{0.45\textwidth}
@@ -187,11 +126,11 @@
             implication of $\typeB$ from $\typeA$
   \end{itemize}
   
-\end{slide}
+\end{frame}
 
 \begin{frame}{A Basic Deductive System}
   
-  $\Gamma$ denotes a \alert{\underline{list of propositions}} (often called context)
+  $\Gamma$ denotes a \alert{list of propositions} (often called context)
 
   $\Gamma \vljud \typeA$ reads \emph{``if the propositions in $\Gamma$ hold then  $\typeA$ also holds''}
 
@@ -220,8 +159,8 @@
  
 \end{frame}
 
-\begin{slide}{New Knowledge From Old}
-  The rules below are \alert{\underline{derivable}} from the previous system
+\begin{frame}{New Knowledge From Old}
+  The rules below are \alert{derivable} from the previous system
 
   \begin{flalign*}
       \infer[\text{(exchange)}]{\Gamma, \typeB, \typeA,\Delta \vljud \typeC}{
@@ -234,10 +173,9 @@
       \Gamma, \typeA \vljud \typeB \qquad \Gamma \vljud \typeA}
   \end{flalign*}
 
- % Proofs (again) by an appeal to your old friend \dots\  \alert{\underline{induction}} :-)
-\end{slide}
+\end{frame}
 
-\begin{frame}{Exercises}
+\begin{frame}{Exercise}
   Derive the following judgements
   \begin{itemize}
           \item $\typeA \to \typeB,\typeB \to \typeC \vljud \typeA \to \typeC$ 
@@ -252,37 +190,42 @@
                 Back to programming \dots
         \end{center}
 \end{frame}
-\begin{slide}{The Bare Essentials of Programming}
-  We should think of
-  what are the \alert{\underline{basic features}} of programming \dots
+%
+\begin{frame}{The Bare Essentials of Programming}
+  %
+  The \alert{basic features} of programming
+  %
   \begin{itemize}
   \item variables  
   \item function application and creation
   \item pairing \dots
   \end{itemize}
-  and base our study on the \alert{\underline{simplest language}} with
-  such features \dots
-  \caixa{
-    \begin{center}
+  %
+  \bigskip
+  %
+  %
+  \begin{center}
+  \fbox{
         Simply-typed $\lambda$-calculus
-    \end{center}
   }
-  \vfill
-  The basis of \alert{\texttt{\underline{Haskell}}}, \texttt{ML},
+  \end{center}
+  %
+  \pause
+  The basis of \alert{\texttt{Haskell}}, \texttt{ML},
   \texttt{Eff}, \texttt{F\#}, \texttt{Agda}, \texttt{Elm} and many
   other programming languages
-\end{slide}
+\end{frame}
+%
+\begin{frame}{Simply-typed Lambda-Calculus}
 
-\begin{frame}{Simply-typed $\lambda$-Calculus}
-
-  Types are defined by $\typeA ::= \typeOne \mid \typeA \times \typeA \mid \typeA
+  Types defined by $\typeA ::= \typeOne \mid \typeA \times \typeA \mid \typeA
   \to \typeA$
 
-  $\Gamma$ now a \alert{\underline{non-repetitive}} list of typed variables
-  ($x_1 : \typeA_1 \dots x_n : \typeA_n$)
+  $\Gamma$ now a \alert{non-repetitive} list of typed variables $x_1 : \typeA_1
+  \dots x_n : \typeA_n$
 
-  Programs built according to the following \alert{\underline{deduction rules}}
-
+  Programs built according to the following \alert{deduction rules}
+  \vspace{0.5cm}
   \small{
   \begin{flalign*}
       \infer[(\rulename{ass})]{\Gamma \vljud x : \typeA}{x :
@@ -306,8 +249,8 @@
     \end{flalign*}
    }
 \end{frame}
-
-\begin{slide}{Examples of $\lambda$-terms}
+%
+\begin{frame}{Examples of $\lambda$-terms}
   \begin{flalign*}
           & x : \typeA \vljud x : \typeA && \text{(identity)}
           \\[15pt]
@@ -322,8 +265,8 @@
           \lambda x : \typeA . \> g (f \> x) : \alert{\typeA \to \typeC}
           && \text{(composition)}
   \end{flalign*}
-\end{slide}
-
+\end{frame}
+%
 \begin{frame}{Exercises}
 
     Recall the derivations that lead to the judgement
@@ -341,11 +284,11 @@
     \]
     and subsequently build the corresponding program
 \end{frame}
-
+%
 \section{Denotational Semantics}
-
-\begin{slide}{A Semantics for Simply Typed $\lambda$-calculus}
-  We wish to assign a \alert{\underline{mathematical meaning}} to $\lambda$-terms
+%
+\begin{frame}{A Semantics for Simply Typed Lambda-calculus}
+  We wish to assign a \alert{mathematical meaning} to $\lambda$-terms
   \begin{flalign*}
     \sem{-} \, : \lambda\text{-terms} \longrightarrow ...
   \end{flalign*}
@@ -354,9 +297,9 @@
   \vfill \pause
   
   This is the goal of the next slides. But first \dots
-\end{slide}
-
-\begin{slide}{Functions: Basic Facts}
+\end{frame}
+%
+\begin{frame}{Functions: Basic Facts}
 
   For every set $X$ there exists a `trivial' function
   \begin{flalign*}
@@ -366,7 +309,7 @@
   We can always pair two functions into
   $f : X \to A$, $g : X \to B$
   \begin{flalign*}
-    \pv{f,g} : X \to A \times B \hspace{1cm} \pv{f,g}(x) = (f \> x, g \> x)
+    \langle f,g \rangle: X \to A \times B \hspace{1cm} \langle f,g \rangle (x) = (f \> x, g \> x)
   \end{flalign*}
 
   There exist projection functions
@@ -374,11 +317,11 @@
     \pi_1 : X \times Y \to X  \hspace{1cm} \pi_1(x,y) = x \\
     \pi_2 : X \times Y \to Y  \hspace{1cm} \pi_2(x,y) = y
   \end{flalign*}
-\end{slide}
+\end{frame}
+%
+\begin{frame}{Functions: Basic Facts}
 
-\begin{slide}{Functions: Basic Facts}
-
-  We can always `curry' a function $f : X \times Y \to Z$ into
+  We can always curry a function $f : X \times Y \to Z$ into
   \begin{flalign*}
     \lambda f : X \to Z^Y \hspace{1cm} \lambda f (x) = (y \mapsto f(x,y))
   \end{flalign*}
@@ -388,10 +331,10 @@
     \mathrm{app} : Z^Y  \times Y \to Z \hspace{1cm}
     \mathrm{app}(f,y) = f \> y
   \end{flalign*}
-\end{slide}
-
-\begin{slide}{Denotational Semantics}
-  Types $\typeA$ interpreted as \alert{\underline{sets}} $\sem{\typeA}$
+\end{frame}
+%
+\begin{frame}{Denotational Semantics}
+  Types $\typeA$ interpreted as \alert{sets} $\sem{\typeA}$
   \begin{flalign*}
     \sem{1} & = \{ \star \} \\
     \sem{\typeA \times \typeB} & = \sem{\typeA} \times \sem{\typeB} \\
@@ -404,15 +347,15 @@
  \sem{\typeA_1} \times \dots \times \sem{\typeA_n} 
  \end{flalign*}
 
- $\lambda$-terms $\Gamma \vljud t : \typeA$ interpreted as \alert{\underline{functions}}
+ Terms $\Gamma \vljud t : \typeA$ interpreted as \alert{functions}
  \begin{flalign*}
    \sem{\Gamma \vljud t : \typeA}\ : \sem{\Gamma}\ \longrightarrow \sem{\typeA}
  \end{flalign*}
 
-\end{slide}
-
-\begin{slide}{Denotational Semantics}
-  $\lambda$-term $\Gamma \vljud t : \typeA$ interpreted as a function
+\end{frame}
+%
+\begin{frame}{Denotational Semantics}
+ Term $\Gamma \vljud t : \typeA$ interpreted as a function
  \begin{flalign*}
    \sem{\Gamma \vljud t : \typeA}\ : \sem{\Gamma}\ \longrightarrow \sem{\typeA}
  \end{flalign*}
@@ -422,12 +365,12 @@
       \infer[]{\sem{\Gamma \vljud x_i : \typeA} = \pi_i}{x_i :
         \typeA \in \Gamma} \hspace{1.2cm}
       \infer[]{\sem{\Gamma \vljud \ast : 1}\ =\ !}{}  \hspace{1.2cm}
-      \infer[]{\sem{\Gamma \vljud \pi_1 t : \typeA} = \pi_1 \comp f }
+      \infer[]{\sem{\Gamma \vljud \pi_1 t : \typeA} = \pi_1 \cdot f }
       {\sem{\Gamma \vljud t : \typeA \times \typeB} = f}
   \end{flalign*}
   \begin{flalign*}
       \infer[]{\sem{\Gamma \vljud \langle t,s \rangle :
-        \typeA \times \typeB}\ = \pv{f,g}}
+        \typeA \times \typeB}\ = \langle f,g \rangle}
     {\sem{\Gamma \vljud t: \typeA}\ = f \qquad \sem{\Gamma \vljud s: \typeB}\ = g}
     \hspace{0.3cm}
      \infer[]{\sem{\Gamma \vljud \lambda x : \typeA . \, t : \typeA
@@ -435,13 +378,15 @@
       {\sem{\Gamma, x : \typeA \vljud t : \typeB}\ = f}
     \end{flalign*}
    \begin{flalign*}
-      \infer[]{\sem{\Gamma \vljud t \, s : \typeB}\ = \mathrm{app} \comp \pv{f,g}}
+      \infer[]{\sem{\Gamma \vljud t \, s : \typeB}\ = \mathrm{app} \cdot \langle f,g \rangle}
       {\sem{\Gamma \vljud  t : \typeA \to \typeB}\ = f \quad
         \sem{\Gamma \vljud  s : \typeA}\ = g}
     \end{flalign*}
 }
-\end{slide}
-
+\end{frame}
+%
+\newcommand{\pv}[1]{\langle #1 \rangle}
+%
 \begin{frame}{The Unravelling}
         \begin{align*}
                 & \sem{x \vljud \pv{ \pi_2 \, x, \, \pi_1 \, x} } &  = \dots 
@@ -470,7 +415,8 @@
                 (\scriptsize{\textbf{N.B.} all types omitted for simplicity})
         \end{center}
 \end{frame}
-\begin{slide}{More exercises}
+%
+\begin{frame}{More exercises}
   Show that the following equations hold
   \begin{flalign*}
     \sem{x, y \vljud \pi_1 \pv{x,y}}\ & =\
@@ -482,6 +428,6 @@
                                     & =\
                                     \sem{ x \vljud \pv{x,x}  }
   \end{flalign*}
-\end{slide}
-
+\end{frame}
+%
 \end{document}

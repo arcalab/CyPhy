@@ -32,6 +32,9 @@ concurrent algorithms.
   | 13 apr. 2026 | Introduction to hybrid semantics ([slides](./hybridProg/hybridProgramming.pdf)) |
   | 14 apr. 2026 | A Zoo of Newtonian hybrid programs ([slides](./hybridProg/hybridProgramming.pdf)) |
   | 14 apr. 2026 | Autonomous driving ([slides](./hybridProg/hybridProgramming.pdf)) |
+  | 20 apr. 2026 | Continuation of the previous lecture ([slides](./hybridProg/hybridProgramming.pdf)) |
+  | 21 apr. 2026 | Introduction to lambda-calculus ([slides](./lambda_calc/lambdaCalc.pdf)) |
+  | 20 apr. 2026 | Continuation of the previous lecture ([slides](./lambda_calc/lambdaCalc.pdf)) |
 
 # Assessment
 
