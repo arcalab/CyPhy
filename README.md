@@ -36,7 +36,7 @@ concurrent algorithms.
   | 21 apr. 2026 | Introduction to lambda-calculus ([slides](./lambda_calc/lambdaCalc.pdf)) |
   | 20 apr. 2026 | Continuation of the previous lecture ([slides](./lambda_calc/lambdaCalc.pdf)) |
   | 04 may 2026 | Introduction to monads ([slides](./lambda_calc/stlcE.pdf)) |
-  | 05 may 2026 | Continuation of the previous lecture ([slides](./lambda_calc/stlcE.pdf)) |
+  | 05 may 2026 | Continuation of the previous lecture ([slides](./lambda_calc/stlcE.pdf))  ([code](./code.zip))|
 
 # Assessment
 
