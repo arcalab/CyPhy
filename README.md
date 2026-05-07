@@ -42,7 +42,7 @@ concurrent algorithms.
 
 Two individual assignments
 + [First assignment](./tp_uppaal/tp.pdf)
-
++ [Second assignment](tp_haskell/tp2.pdf) and [code](tp_haskell/code_tp2.zip)
 # Contacts
 
 The day and time for appointments is tuesday afternoon. Please email me the
