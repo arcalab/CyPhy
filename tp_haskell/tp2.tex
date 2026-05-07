@@ -1,0 +1,141 @@
+\documentclass[11pt]{article}
+
+%\renewcommand\familydefault{\sfdefault}
+ 
+%input preamble and macros
+\input{preamble}
+\input{macros}
+
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{hyperref}
+\usepackage[linewidth=1pt]{mdframed}
+%\newcommand{\N}{\mathbb{N}}
+%\newcommand{\Z}{\mathbb{Z}}
+
+% Named environments (no counters) 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+%\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+%\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+ 
+% Environments with counters
+\newtheoremstyle{myplain} {5mm}% ⟨Space above⟩
+{3mm}% ⟨Space below⟩
+{}% ⟨Body font⟩
+{}% ⟨Indent amount⟩
+{\bfseries}% ⟨Theorem head font⟩
+{.}% ⟨Punctuation after theorem head⟩
+{.5em}% ⟨Space after theorem head⟩2
+{}% ⟨Theorem head spec (can be left empty, meaning ‘normal’)⟩
+
+\date{}
+
+\theoremstyle{myplain}
+\newtheorem{exercise}{Exercise}
+
+\theoremstyle{definition} % no italics
+\newtheorem{subexercise}{}[exercise]
+
+\newcommand{\subex}[1]{\begin{subexercise}#1\end{subexercise}}
+
+\begin{document}
+ 
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+ 
+\title{Modelling and analysis of a cyber-physical system \\
+now with \underline{monads} !! \\[10pt] \small{Practical assignment 2}}
+\author{Renato Neves}
+ 
+\maketitle
+
+\noindent
+In the middle of the night four adventurers encounter a rope-bridge that spans
+a deep ravine. For safety reasons, no more than two people cross the bridge at
+the same time and a flashlight needs to be carried in every crossing.  There is
+only one flashlight. The four adventurers are not equally skilled: crossing the
+bridge takes them one, two, five, and ten minutes respectively. A pair of
+adventurers crosses the bridge in an amount of time equal to that of the
+slowest of the two.
+\begin{center}
+\includegraphics[scale=0.8]{images/ropebridge-diag}
+\end{center}
+One adventurer claims that they cannot be all on the other side in less than 19
+minutes. Another one disagrees and claims that it can be done in 17 minutes.
+
+\subsubsection*{First task}
+
+Your first task is to verify these claims using
+\textsc{Haskell}\footnote{An animated description of the problem is
+  available
+  \href{https://www.youtube.com/watch?v=7yDmGnA8Hw0}{here}.}. Specifically
+you will need to,
+\begin{enumerate}
+\item \underline{model} the system above using what you learned about
+  \underline{monads}, in particular the duration and non-deterministic ones;
+\item show that it is indeed \underline{possible} for all adventurers
+  to be on the other side in 17 minutes;
+\item show that it is \underline{impossible} for all adventurers
+  to be on the other side in less than 17 minutes.
+\end{enumerate}
+You should fulfill this task by \underline{completing the code} in attachment
+(\texttt{Adventurers.hs}), i.e. by adding a definition to the functions that
+lack a definition, \underline{following the comments} present in the code. You
+are free to add new auxiliary functions.
+
+\noindent
+\textbf{Some hints} to help you get started: Recall the duration monad from the
+slides and the \textsc{Haskell} code that was previously provided. Analyse in
+detail the code concerning the Knight's quest and in particular the monad
+\texttt{LogList}.
+
+\subsubsection*{Second task}
+
+Implement a function that receives a list of valid plays and returns a
+\emph{distribution} of the resulting states together with the corresponding
+elapsed time. The function should in particular encompass \emph{probabilistic
+crossing times}: \ie\ if the adventurer's crossing time is $x$ then its
+probabilistic crossing time will now be given by the uniform distribution,
+\[
+        \frac{1}{3} \cdot \left ( x - \frac{x}{2} \right ) 
+                + \frac{1}{3} \cdot  \left ( x \right )
+                + \frac{1}{3} \cdot \left ( x + \frac{x}{2} \right )
+\]
+In this probabilistic setting, what can you conclude about the adventurer's
+claims mentioned above?  Again you should fulfill this task by
+\underline{completing the code} in attachment (\texttt{Adventurers.hs}), \ie\
+by adding a definition to the functions that lack a definition,
+\underline{following the comments} present in the code. Feel free to add new
+auxiliary functions.
+
+\subsubsection*{Third task}
+
+Add new functionalities to the code which you think are essential or
+interesting. For example present the sequence of states respective to the
+movements of the adventurers from the initial state to the final goal, or make
+the game more interactive via the IO monad. Imagination is the limit -- but of
+course remind yourself that the focus is the use of monads in programming :-).
+
+\bigskip
+
+\begin{mdframed}  
+  \myparagraph{What to submit:} A single report in PDF for all tasks and the
+  respective source files. Send by email (\underline{nevrenato@gmail.com}) a
+  unique zip file ``\bash{cf2526-N.zip}'', where \bash{N} is your student
+  number. The subject of the email should be ``\bash{cf2526 N}''.
+
+\myparagraph{Deadline:} 10th June 2026 @ 23h59
+\end{mdframed}
+
+\end{document}
